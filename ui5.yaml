@@ -1,0 +1,11 @@
+specVersion: "2.5"
+metadata:
+  name: ui5.pjtest
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      mountPath: /ConnectNorthwind/
+      afterMiddleware: compression
+      configuration:
+        baseUrl: https://services.odata.org
